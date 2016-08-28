@@ -11,7 +11,7 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('*', function(req, res) {
-  res.sendfile('./public/foo.html'); // load our public/index.html file
+  res.sendFile('public/foo.html', {root: __dirname + '/../../'}); // load our public/index.html file
 });
 
 // define the about route

@@ -17,6 +17,6 @@ angular.module('NerdService', []).factory('NerdService', ['$http', function($htt
         delete : function(id) {
             return $http.delete('/api/nerds/' + id);
         }
-    }
+    };
 
 }]);
