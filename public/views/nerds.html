@@ -4,4 +4,10 @@
     <h1>Nerds and Proud</h1>
 
     <p>{{ tagline }}</p>
+
+    <ul>
+        <li ng-repeat="nerd in nerds">
+            {{nerd.name}}
+        </li>
+    </ul>
 </div>
