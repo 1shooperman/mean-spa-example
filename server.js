@@ -5,6 +5,7 @@ var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
+var morgan         = require('morgan');
 
 // configuration ===========================================
 
@@ -35,6 +36,8 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/public'));
+
+app.use(morgan('dev'));
 
 // routes ==================================================
 require('./app/routes')(app); // configure our routes
