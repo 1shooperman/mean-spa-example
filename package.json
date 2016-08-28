@@ -1,8 +1,8 @@
 {
   "name": "example",
   "main": "server.js",
-  "version": "0.1.1",
-  "description": "This is a example",
+  "version": "0.1.2",
+  "description": "This is an example",
   "dependencies": {
     "express" : "~4.5.1",
     "mongoose" : "~4.5.9",
