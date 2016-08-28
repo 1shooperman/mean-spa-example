@@ -40,7 +40,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 
 // routes ==================================================
-require('./app/routes')(app); // configure our routes
+app.use('/api', require('./app/routes/api'));
+app.use('*', require('./app/routes/angular'));
 
 // start app ===============================================
 // startup our app at http://localhost:8080
