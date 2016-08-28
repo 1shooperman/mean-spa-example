@@ -18,7 +18,6 @@ var db = require('./config/db');
 // connect to our mongoDB database
 // (uncomment after you enter in your own credentials in config/db.js)
 var mongoose = require('mongoose');
-var Nerd = require('./app/models/Nerd')(mongoose);
 mongoose.connect(db.url);
 
 // get all data/stuff of the body (POST) parameters

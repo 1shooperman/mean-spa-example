@@ -1,6 +1,7 @@
 // app/models/nerd.js
 
-module.exports = function(mongoose) {
+  var mongoose = require('mongoose');
+
   var Schema       = mongoose.Schema;
 
   // define our nerd model
@@ -9,8 +10,9 @@ module.exports = function(mongoose) {
       name : {type : String, default: ''}
   });
 
-  mongoose.model('Nerd', NerdSchema);
-}
+
+  module.exports = mongoose.model('Nerd', NerdSchema);
+
 
 
 //http://mongoosejs.com/docs/guide.html
