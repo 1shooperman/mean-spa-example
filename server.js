@@ -1,6 +1,3 @@
-//https://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application
-
-
 // server.js
 
 // modules =================================================
@@ -11,15 +8,17 @@ var methodOverride = require('method-override');
 
 // configuration ===========================================
 
+// set our port
+var port = process.env.PORT || 3001;
+
 // config files
 var db = require('./config/db');
 
-// set our port
-var port = process.env.PORT || 8080;
-
 // connect to our mongoDB database
 // (uncomment after you enter in your own credentials in config/db.js)
-// mongoose.connect(db.url);
+var mongoose = require('mongoose');
+var Nerd = require('./app/models/Nerd')(mongoose);
+mongoose.connect(db.url);
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json
