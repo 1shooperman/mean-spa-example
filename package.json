@@ -3,6 +3,9 @@
   "main": "server.js",
   "version": "0.2.0",
   "description": "This is an example",
+  "scripts": {
+    "devbuild": "bower install && grunt jshint && grunt uglify && grunt less && grunt cssmin"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
