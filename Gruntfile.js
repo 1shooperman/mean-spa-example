@@ -3,6 +3,25 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    env: {
+        test: {
+            NODE_ENV: 'test'
+        }
+    },
+
+    // Mocha Test
+    mochaTest: {
+      test: {
+        options: {
+          //reporter: 'list',
+          reporter: 'spec',
+          //require: 'server.js',
+          timeout: 15000
+        },
+        src: ['test/*.js','test/**/*.js']
+      }
+    },
+
     // JS TASKS ================================================================
     // check all js files for errors
     jshint: {
@@ -74,7 +93,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-env');
+  grunt.loadNpmTasks('grunt-mocha');
+  grunt.loadNpmTasks('grunt-mocha-test');
 
   grunt.registerTask('default', ['less', 'cssmin', 'jshint', 'uglify', 'concurrent']);
+
+  // Test task.
+  grunt.registerTask('test', ['env:test', 'mochaTest']);
 
 };

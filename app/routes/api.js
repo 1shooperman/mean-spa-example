@@ -1,3 +1,5 @@
+'use strict';
+
 // // frontend routes =========================================================
 //route to handle all angular requests
 
