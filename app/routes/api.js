@@ -25,7 +25,7 @@ router.route('/nerds')
     .post(function(req, res) {
 
         var nerd = new Nerd();      // create a new instance of the Bear model
-        console.log(nerd);
+
         nerd.name = req.body.name;  // set the bears name (comes from the request)
 
         // save the bear and check for errors
