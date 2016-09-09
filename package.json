@@ -4,7 +4,8 @@
   "version": "0.2.0",
   "description": "This is an example",
   "scripts": {
-    "devbuild": "bower install && grunt jshint && grunt uglify && grunt less && grunt cssmin"
+    "devbuild": "bower install && grunt jshint && grunt uglify && grunt less && grunt cssmin",
+    "test": "grunt test"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -14,6 +15,7 @@
     "morgan": "^1.7.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-concurrent": "^2.3.1",
@@ -22,7 +24,11 @@
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-nodemon": "^0.4.2"
+    "grunt-env": "^0.4.4",
+    "grunt-mocha": "^1.0.2",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-nodemon": "^0.4.2",
+    "mocha": "^3.0.2"
   },
   "private": true
 }
